@@ -2,6 +2,31 @@
 @model ICollection<Kigg.DomainObjects.ICategory>
 
 @functions {
+    private string GetMainPageTabCssClass()
+    {
+        return Request.Url.AbsolutePath == "/" ? "active" : string.Empty;
+    }
+
+    private string GetCategoryTabCssClass()
+    {
+        return Request.Url.AbsolutePath.Contains("Category") ? "active" : string.Empty;
+    }
+
+    private string GetLastRowCssClass(int index, int count)
+    {
+        return index / 4 == count / 4 ? "last" : String.Empty;
+    }
+
+    private string GetLastColumnCssClass(int index)
+    {
+        return (index + 1) % 4 == 0 ? "last-col" : String.Empty;
+    }
+
+    private string GetAboutTabCssClass()
+    {
+        return IsInSupportPages(Request.Url.AbsolutePath) ? "active" : string.Empty;
+    }
+
     private bool IsInSupportPages(string url)
     {
         return url.Contains("PromoteSite") || url.Contains("Faq") || url.Contains("Contact") || url.Contains("About") || url.Contains("Policy") || url.Contains("Odznaki");
@@ -16,10 +41,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto primary-nav">
             <li class="nav-item">
-                <a class="nav-link @{Request.Url.AbsolutePath == "/" ? "active" : string.Empty}" href="/">Strona główna</a>
+                <a class='nav-link @GetMainPageTabCssClass()' href="/">Strona główna</a>
             </li>
             <li class="nav-item" id="categories">
-                <a class="nav-link dropdown-toggle @{Request.Url.AbsolutePath.Contains("Category") ? "active" : string.Empty}" href="#" id="navbarCategoryDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kategorie</a>
+                <a class='nav-link dropdown-toggle @GetCategoryTabCssClass()' href="#" id="navbarCategoryDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kategorie</a>
                 <div class="categories dropdown-menu clearfix" aria-labelledby="navbarCategoryDropdown">
                     <ul>
                         @{
@@ -29,7 +54,7 @@
                             foreach (ICategory category in Model.OrderBy(x => x.Name))
                             {
 
-                                <li class="col-12 col-sm-3 @{(index / 4 == count / 4 ? "last" : string.Empty) + ((index + 1) % 4 == 0 ? "last-col" : string.Empty)}">
+                                <li class='col-12 col-sm-3 @GetLastRowCssClass(index, count) @GetLastColumnCssClass(index)'>
                                     <strong>
                                         @Html.ActionLink(category.Name, "Category", "Story", new {name = category.UniqueName}, new {rel = "tag directory", @class = "sublink dropdown-item"})
                                     </strong>
@@ -45,7 +70,7 @@
                 </div>
             </li>
             <li class="nav-item dropdown" id="about">
-                <a class="nav-link dropdown-toggle @{IsInSupportPages(Request.Url.AbsolutePath) ? "active" : string.Empty}" href="#" id="navbarAboutDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class='nav-link dropdown-toggle @GetAboutTabCssClass()' href="#" id="navbarAboutDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     O dotNETomaniaku
                 </a>
                 <div class="about dropdown-menu clearfix" aria-labelledby="navbarAboutDropdown">

@@ -1,12 +1,20 @@
 ﻿@using Kigg.Web
 @model Kigg.Web.BadgesViewData
 
+@functions
+{
+    private string GetParityCssClass(int number)
+    {
+        return number % 2 == 0 ? "odd" : "even";
+    }
+}
+
 <ol class="badges">
     @{
         int i = 0;
         foreach (var badge in Model.Badges.OrderByDescending(x => x.Count))
         {
-            <li class='custom-badge @{i++ % 2 == 0 ? "odd" :"even"}'>
+            <li class='custom-badge @GetParityCssClass(i)'>
                 <strong>@Html.Translated(badge.Name)</strong>
                 @if (badge.Name == "PlaqueBadge")
                 {
@@ -22,6 +30,7 @@
                 }
                 <span>@badge.Count</span>
             </li>
+            i++;
         }
     }
 </ol>
