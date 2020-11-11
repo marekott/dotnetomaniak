@@ -1,0 +1,12 @@
+﻿@using Kigg.DomainObjects
+@model ICollection<Kigg.DomainObjects.ICategory>
+
+<div class="radios">
+    @foreach (ICategory category in Model.Where(c => c.IsActive).OrderBy(c => c.Name))
+    {
+        <div class="radio-wrapper">
+            <input type="radio" name="category" value="@Html.AttributeEncode(category.UniqueName)"/>
+            <label class="radio-label">@category.Name</label>
+        </div>
+    }
+</div>
