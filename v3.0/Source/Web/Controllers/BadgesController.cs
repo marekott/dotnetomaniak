@@ -16,6 +16,7 @@ namespace Kigg.Web
             _achievementRepository = achievementRepository;
         }
 
+        [OutputCache(Duration = 300, VaryByParam = "None")]
         public ActionResult All()
         {
             var all = _achievementRepository.GetAll();
@@ -40,6 +41,7 @@ namespace Kigg.Web
         }
 
         [Authorize]
+        [OutputCache(Duration = 300, VaryByParam = "None")]
         public ActionResult SeekerFlag()
         {
             var flagUuid = Guid.Parse("8238324A-F425-40C9-AF64-969F5A8393C3");
