@@ -1,0 +1,61 @@
+﻿@using Kigg.Web
+@model Kigg.Web.ViewData.CommingEventsViewData
+
+<div>
+    @Html.PageHeader("Lista wydarzeń:")
+    <br />
+    <a id="lnkAddEventAdmin" href="javascript:void(0)">Dodaj wydarzenie</a>
+    <table id="adsTable">
+        <tr>
+            <th>
+                Nazwa i Link
+            </th>
+            <th>
+                Data
+            </th>
+            <th>
+                Miejsce
+            </th>
+            <th>
+                Opis
+            </th>
+        </tr>
+        @foreach (var comingEventViewData in Model.CommingEvents)
+        {
+            <tr style="@(comingEventViewData.IsApproved != true ? "background: lightgray" : "")">
+                <td>
+                    <a href="@comingEventViewData.EventLink">
+                        @comingEventViewData.EventName
+                    </a>
+                </td>
+                <td>
+                    @comingEventViewData.EventDate.ToShortDateString()
+                </td>
+                <td>
+                    @comingEventViewData.EventPlace
+                </td>
+                <td>
+                    @comingEventViewData.EventLead
+                </td>
+            </tr>
+            <tr style="@(comingEventViewData.IsApproved != true ? "background: lightgray" : "")">
+                <td>
+                    Akcje:
+                </td>
+                <td>
+                    <a href="javascript:void(0);" data-edit-event-id="@comingEventViewData.Id">Edytuj</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" data-event-id="@comingEventViewData.Id">Usuń</a>
+                </td>
+                <td>
+                </td>
+            </tr>
+        }
+    </table>
+    <div class="input-color">
+        <div class="color-box" style="background-color: lightgray; text-align: center;">
+            Niezatwierdzone wydarzenie
+        </div>
+    </div>
+</div>

@@ -728,11 +728,8 @@
     <Content Include="Views\Badges\List.cshtml" />
     <Content Include="Views\Badges\Seeker.cshtml" />
     <Content Include="Views\Category\Menu.cshtml" />
-    <Content Include="Views\CommingEvent\CommingEventList.ascx" />
-    <Content Include="Views\CommingEvent\CommingEventsEditBox.aspx" />
     <Content Include="Views\Membership\Achievements.ascx" />
     <Content Include="Views\Quiz\QuizView.aspx" />
-    <Content Include="Views\CommingEvent\AllCommingEvent.aspx" />
     <Content Include="Views\Shared\MembershipBox.cshtml" />
     <Content Include="Views\Shared\RecommendationsBox.cshtml" />
     <Content Include="Views\Story\Similars.ascx" />
@@ -767,6 +764,9 @@
     <Content Include="Views\Shared\SearchBox.cshtml" />
     <Content Include="Views\Shared\FbLog.cshtml" />
     <Content Include="Views\Category\RadioButtonList.cshtml" />
+    <Content Include="Views\CommingEvent\CommingEventsEditBox.cshtml" />
+    <Content Include="Views\CommingEvent\CommingEventList.cshtml" />
+    <Content Include="Views\CommingEvent\AllCommingEvent.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Kigg.Core.csproj">

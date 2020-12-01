@@ -1,0 +1,35 @@
+﻿@model CommingEventsViewData
+@using Kigg.Web.ViewData
+
+@{ bool isOdd = true; }
+<div class="commingEventsList">
+    @foreach (var comingEventsInMonth in Model.CommingEvents.OrderBy(x => x.EventDate).GroupBy(x => x.EventDate.Month))
+    {
+        <div class="commingEventsMonth" style="border-bottom:dotted; border-bottom-color:lightgray; border-bottom-width:thin;">
+            <h2>@comingEventsInMonth.FirstOrDefault().EventDate.ToString("MMMM")</h2>
+        </div>
+
+        foreach (var comingEvent in comingEventsInMonth)
+        {
+            string styles = "min-height:110px; padding-top:0px; border-color:transparent; background:center; margin-bottom: 15px;";
+            <div style='@styles @(isOdd == false ? "background-color:#F6F6F6;" : "")'>
+                <div class="commingEventDay">@comingEvent.EventDate.ToString("dd").</div>
+                <div class="commingEventBody">
+                    <a class="commingEventTitle" href="@comingEvent.EventLink" title="@comingEvent.EventName" target="_blank" rel="noopener">
+                        @comingEvent.EventName
+                    </a>
+                    <div class="commingEventPlace">@comingEvent.EventPlace</div>
+                </div>
+                @if(comingEvent.EventLead == null)
+                {
+                    <div class="commingEventLead">Brak opisu</div>
+                }
+                else
+                {
+                    <div class="commingEventLead">@comingEvent.EventLead</div>
+                }
+            </div>
+             isOdd = !isOdd;
+        }
+    }
+</div>
