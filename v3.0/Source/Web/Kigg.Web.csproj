@@ -728,7 +728,6 @@
     <Content Include="Views\Badges\List.cshtml" />
     <Content Include="Views\Badges\Seeker.cshtml" />
     <Content Include="Views\Category\Menu.cshtml" />
-    <Content Include="Views\Membership\Achievements.ascx" />
     <Content Include="Views\Quiz\QuizView.aspx" />
     <Content Include="Views\Shared\MembershipBox.cshtml" />
     <Content Include="Views\Shared\RecommendationsBox.cshtml" />
@@ -767,6 +766,12 @@
     <Content Include="Views\CommingEvent\CommingEventsEditBox.cshtml" />
     <Content Include="Views\CommingEvent\CommingEventList.cshtml" />
     <Content Include="Views\CommingEvent\AllCommingEvent.cshtml" />
+    <Content Include="Views\Membership\TopTabs.cshtml" />
+    <Content Include="Views\Membership\Top.cshtml" />
+    <Content Include="Views\Membership\Menu.cshtml" />
+    <Content Include="Views\Membership\List.cshtml" />
+    <Content Include="Views\Membership\Achievements.cshtml" />
+    <Content Include="Views\Membership\Detail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Kigg.Core.csproj">
@@ -928,11 +933,7 @@
     <Content Include="ErrorPages\Generic.aspx" />
     <Content Include="ErrorPages\AccessDenied.aspx" />
     <Content Include="robots.txt" />
-    <Content Include="Views\Membership\Chart.ascx" />
-    <Content Include="Views\Membership\Detail.aspx" />
-    <Content Include="Views\Membership\List.aspx" />
     <Content Include="Views\Support\ControlPanel.ascx" />
-    <Content Include="Views\Membership\Top.ascx" />
     <Content Include="Views\Story\ImageCode.ascx" />
     <Content Include="Views\Story\Comments.ascx" />
     <Content Include="Views\Story\Votes.ascx" />
@@ -941,14 +942,12 @@
     <Content Include="Views\Support\Faq.aspx" />
     <Content Include="Views\Tag\Cloud.ascx" />
     <Content Include="Views\Story\List.aspx" />
-    <Content Include="Views\Membership\TopTabs.ascx" />
     <Content Include="Views\Story\StoryEditorBox.ascx" />
     <Content Include="Views\Support\About.aspx" />
     <Content Include="Views\Story\Detail.aspx" />
     <Content Include="Views\Shared\SiteTemplate.Master" />
     <Content Include="Views\Story\New.aspx" />
     <Content Include="Views\Support\Contact.aspx" />
-    <Content Include="Views\Membership\Menu.ascx" />
     <Content Include="Views\Story\Story.ascx" />
     <Content Include="Views\Tag\Tabs.ascx" />
     <Content Include="packages.config">

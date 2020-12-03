@@ -1,0 +1,15 @@
+﻿@using Kigg
+@model Kigg.Web.TopUserTabsViewData
+
+@{
+    bool shouldShowLeaderTab = (Model.TopLeaders.IsNullOrEmpty() == false);
+
+    if (shouldShowLeaderTab)
+    {
+        <div class="pageTitle"><h2>Najaktywniejsi</h2></div>
+        <div id="toplist" class="col-12">
+
+            @Html.Partial("Top", Model.TopLeaders)
+        </div>
+    }
+}
