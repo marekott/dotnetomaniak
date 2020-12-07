@@ -1,0 +1,37 @@
+﻿@using Kigg
+@using Kigg.Web
+@model Kigg.Web.SupportViewData
+
+@{
+    Page.Header.Title = "{0} - O nas".FormatWith(Model.SiteTitle);
+}
+
+@Html.ArticleHeader("O nas", new[] { "Strona główna", "O nas" })
+<div id="aboutUs">
+    <p>
+        Jesteśmy pasjonatami, chcącymi rozwijać społeczność .NET w Polsce. Poprzez portale takie jak ten
+        zbliżać wszystkich, którym technologia .NET nie jest obojętna a dzięki umieszczaniu i wymianie artykułów, rozwijać i poszerzać swoją wiedzę.
+    </p>
+    <p>Dodatkowo prowadzimy własnego bloga pod adresem: <a href="https://blog.dotnetomaniak.pl/">https://blog.dotnetomaniak.pl/</a>. Poza infromacjami o portalu co tydzień publikujemy tam podsumowanie tygodnia.</p>
+    <p>Jeśli technologia .NET nie jest Ci obojętna - przyłącz się do nas i zamieszczaj artykuły.</p>
+    <p>Całość jest open-source a źródła dostępne są na <a href="https://github.com/dotnetomaniak/dotnetomaniak" target="_blank" rel="external noopener noreferrer">GitHubie</a></p>
+    <p>Obecnie w rozwoju pomagają:</p>
+    <ul>
+        <li>
+            <a href="https://www.linkedin.com/in/mateusz-wiatrzyk-91637516b/">
+                Mateusz Wiatrzyk
+            </a>
+        </li>
+        <li><a href="https://stapp.space">Piotr Stapp</a></li>
+        <li><a href="http://pawlos.blogspot.com">Paweł Łukasik</a></li>
+    </ul>
+    <p style="margin: 25px 0 8px 0">Wspierali:</p>
+    <ul>
+        <li><a href="http://geekswithblogs.net/jakubmal/Default.aspx">Jakub Malinowski</a></li>
+        <li><a href="#">Michał Laskowski</a></li>
+        <li>Michał Jałbrzykowski (grafika)</li>
+        <li>Łukasz Wawrzyniak</li>
+        <li>Paweł Kubacki</li>
+    </ul>
+    <p>Chcesz nam pomóc? Napisz do <a href="@Url.RouteUrl("Contact")">nas</a> lub pomóż nam rozwijać projekt na <a href="https://github.com/dotnetomaniak/dotnetomaniak" target="_blank" rel="external noopener noreferrer">GitHubie</a>.</p>
+</div>
