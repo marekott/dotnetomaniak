@@ -728,7 +728,6 @@
     <Content Include="Views\Badges\List.cshtml" />
     <Content Include="Views\Badges\Seeker.cshtml" />
     <Content Include="Views\Category\Menu.cshtml" />
-    <Content Include="Views\Quiz\QuizView.aspx" />
     <Content Include="Views\Shared\MembershipBox.cshtml" />
     <Content Include="Views\Shared\RecommendationsBox.cshtml" />
     <Content Include="Views\Story\Similars.ascx" />
@@ -772,6 +771,7 @@
     <Content Include="Views\Membership\List.cshtml" />
     <Content Include="Views\Membership\Achievements.cshtml" />
     <Content Include="Views\Membership\Detail.cshtml" />
+    <Content Include="Views\Quiz\QuizView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Kigg.Core.csproj">

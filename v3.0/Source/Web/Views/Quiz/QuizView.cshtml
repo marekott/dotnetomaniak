@@ -1,0 +1,46 @@
+﻿@using Kigg.Web
+@model Kigg.Web.QuizViewData
+
+
+<h2>Konkurs</h2>
+@if (DateTime.Compare(Model.StartDate, DateTime.Now) == 1)
+{
+    <p>Już jutro pojawi się nowy konkurs.</p>
+}
+@if (DateTime.Compare(Model.StartDate, DateTime.Now) < 0)
+{
+    <p>Mamy przyjemność ogłosić konkurs na stronach <a href="http://dotnetomaniak.pl">http://dotnetomaniak.pl</a>.</p>
+    <p>Wszystko to możliwe dzięki naszym sponsorom:</p>
+    <ul style="list-style: none">
+        <li><a href="http://telerik.com"><img src="@Url.Image("Telerik_logo.png")" alt="Telerik" /></a></li>
+        <li><a href="http://microsoft.com/poland/"><img src="@Url.Image("Microsoft.png")" alt="Microsoft Polska" /></a></li>
+        <li><a href="http://red-gate.com"><img src="@Url.Image("redgate.jpg")" alt="Red-Gate" /></a></li>
+        <li><a href="http://jetbrains.com"><img src="@Url.Image("logo_jetbrains.gif")" alt="jetbrains" /></a></li>
+        <li><a href="http://polishwords.com.pl"><img src="@Url.Image("Polishwords300x73.png")" alt="Strona Polishwords" /></a></li>
+    </ul>
+    <p>Strona <a href="http://polishwords.com.pl">http://polishwords.com.pl</a> została także patronem medialnym konkursu.</p>
+    <p>Nagrody mamy naprawdę imponujące - na prawdę jest o co walczyć:</p>
+    <ul>
+        <li>Telerik Premium Collection</li>
+        <li>Red-gate's ANTS Memory Profiler</li>
+        <li>JetBrains's dotTrace</li>
+        <li>kamery internetowe oraz myszki</li>
+        <li>koszulki, książki, gadżety</li>
+    </ul>
+    <p>A teraz już bez zbędnego tracenia czasu zachęcam do zapoznania się z regulaminem i udziału w konkursie. A potem do pisania i wyszukiwania tekstów o .NET. Powodzenia.</p>
+    <p><a href="@Url.File(" regulamin.pdf")" target="_blank">Regulamin konkursu</a></p>
+    <h3>Sponsorzy</h3>
+
+    <p>Podziękujcie naszym sponsorom odwiedzając ich strony. Być może w przyszłości obdarują nas kolejnymi nagrodami.</p>
+    <ul>
+        <li><p>Telerik - Telerik is a leading vendor of User Interface (UI) components for Microsoft .NET technologies – ASP.NET AJAX, Silverlight, WinForms and WPF, and .NET Reporting and content management solutions. Building on its expertise in interface development and Microsoft technologies, Telerik helps customers build applications with unparalleled richness, responsiveness and interactivity. Created with passion, Telerik products help thousands of developers every day to be more productive and deliver reliable applications under budget and on time.</p></li>
+        <li><p>Microsoft - Microsoft jest światowym liderem w produkcji oprogramowania, świadczeniu usług i technologiach internetowych, przeznaczonych do użytku osobistego i biznesowego. Założona w 1975 firma oferuje szeroki zakres produktów i usług, zaprojektowanych aby pomagać ludziom i organizacjom w realizowaniu potencjału.<br />Więcej informacji na stronie: <a href="http://www.microsoft.com">http://www.microsoft.com</a></p></li>
+        <li><p>RedGate - Red Gate Software makes ingeniously simple tools for over 500,000 Microsoft technology professionals working with SQL Server, .NET, and Exchange Server.  The company’s product line includes must-have tools for .NET developers who program in C# or VB.NET. <a href="http://snurl.com/antsmp">Download your free trial of ANTS Memory Profiler</a>, for identifying causes of memory leaks and optimizing the memory usage of your applications.</p></li>
+        <li><p>JetBrains - Resharper - The must-have productivity tool for .NET development in Visual Studio, dotTrace Profiler - An intuitive and super fast memory & performance profiler for .NET</p></li>
+        <li><p>Polishwords - Polishwords to strona z filmami instruktażowymi w języku polskim, z których nauczysz się pisać profesjonalne dokumenty, programować i nie tylko!</p></li>
+    </ul>
+}
+@if (DateTime.Compare(Model.StartDate, DateTime.Now) > 1)
+{
+    <p>Aktualnie brak jest konkursów.</p>
+}
