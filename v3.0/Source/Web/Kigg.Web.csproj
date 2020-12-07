@@ -772,6 +772,8 @@
     <Content Include="Views\Membership\Achievements.cshtml" />
     <Content Include="Views\Membership\Detail.cshtml" />
     <Content Include="Views\Quiz\QuizView.cshtml" />
+    <Content Include="Views\Tag\Tabs.cshtml" />
+    <Content Include="Views\Tag\Cloud.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Kigg.Core.csproj">
@@ -940,7 +942,6 @@
     <Content Include="Views\Story\UserStoryList.ascx" />
     <Content Include="Views\Story\StoryList.ascx" />
     <Content Include="Views\Support\Faq.aspx" />
-    <Content Include="Views\Tag\Cloud.ascx" />
     <Content Include="Views\Story\List.aspx" />
     <Content Include="Views\Story\StoryEditorBox.ascx" />
     <Content Include="Views\Support\About.aspx" />
@@ -949,7 +950,6 @@
     <Content Include="Views\Story\New.aspx" />
     <Content Include="Views\Support\Contact.aspx" />
     <Content Include="Views\Story\Story.ascx" />
-    <Content Include="Views\Tag\Tabs.ascx" />
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
