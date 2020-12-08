@@ -1,0 +1,23 @@
+﻿@model IEnumerable<XmlNode>
+
+@using System.Xml
+@using System.Linq
+
+<h2 style="padding-bottom:10px;">Powiązane pytania z devPytania:</h2>
+<ul>
+    @if (Model == null || (Model != null && Model.Count() == 0))
+    {
+        <span>Nie znaleziono powiązanych pytań.</span>
+    }
+    else
+    {
+        foreach (var entry in Model.Take(7))
+        {
+            <li style="padding-top:10px;">
+                <a href="@entry.SelectSingleNode("link").InnerText">
+                    @entry.SelectSingleNode("title").InnerText
+                </a>
+            </li>
+        }
+    }
+</ul>

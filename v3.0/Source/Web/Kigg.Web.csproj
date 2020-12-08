@@ -730,8 +730,6 @@
     <Content Include="Views\Category\Menu.cshtml" />
     <Content Include="Views\Shared\MembershipBox.cshtml" />
     <Content Include="Views\Shared\RecommendationsBox.cshtml" />
-    <Content Include="Views\Story\Similars.ascx" />
-    <Content Include="Views\Story\Questions.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -778,6 +776,18 @@
     <Content Include="Views\Support\ControlPanel.cshtml" />
     <Content Include="Views\Support\Contact.cshtml" />
     <Content Include="Views\Support\About.cshtml" />
+    <Content Include="Views\Story\Votes.cshtml" />
+    <Content Include="Views\Story\UserStoryList.cshtml" />
+    <Content Include="Views\Story\StoryList.cshtml" />
+    <Content Include="Views\Story\StoryEditorBox.cshtml" />
+    <Content Include="Views\Story\Story.cshtml" />
+    <Content Include="Views\Story\Similars.cshtml" />
+    <Content Include="Views\Story\Questions.cshtml" />
+    <Content Include="Views\Story\New.cshtml" />
+    <Content Include="Views\Story\List.cshtml" />
+    <Content Include="Views\Story\ImageCode.cshtml" />
+    <Content Include="Views\Story\Detail.cshtml" />
+    <Content Include="Views\Story\Comments.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Kigg.Core.csproj">
@@ -939,17 +949,7 @@
     <Content Include="ErrorPages\Generic.aspx" />
     <Content Include="ErrorPages\AccessDenied.aspx" />
     <Content Include="robots.txt" />
-    <Content Include="Views\Story\ImageCode.ascx" />
-    <Content Include="Views\Story\Comments.ascx" />
-    <Content Include="Views\Story\Votes.ascx" />
-    <Content Include="Views\Story\UserStoryList.ascx" />
-    <Content Include="Views\Story\StoryList.ascx" />
-    <Content Include="Views\Story\List.aspx" />
-    <Content Include="Views\Story\StoryEditorBox.ascx" />
-    <Content Include="Views\Story\Detail.aspx" />
     <Content Include="Views\Shared\SiteTemplate.Master" />
-    <Content Include="Views\Story\New.aspx" />
-    <Content Include="Views\Story\Story.ascx" />
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>

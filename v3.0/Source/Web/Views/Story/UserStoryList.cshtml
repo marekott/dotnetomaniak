@@ -1,0 +1,29 @@
+﻿@using Kigg
+@using Kigg.DomainObjects
+@using Kigg.Web
+@model Kigg.Web.StoryListUserViewData
+
+@if (!Model.Stories.IsNullOrEmpty())
+{
+    bool isOdd = true;
+    foreach (IStory story in Model.Stories)
+    {
+        string className = (isOdd) ? "odd" : "even";
+        <div id="t-@Html.AttributeEncode(story.Id.Shrink())" class="story @className hentry row clearfix">
+            @Html.Partial("Story", new StoryItemViewData { Story = story, User = Model.CurrentUser, PromoteText = ViewData.Model.PromoteText, DemoteText = ViewData.Model.DemoteText, CountText = Model.CountText, SocialServices = Model.SocialServices, DetailMode = false })
+            <div class="clearfix"></div>
+        </div>
+        isOdd = !isOdd;
+    }
+    @Html.UserStoryListPager(Model.SelectedTab)
+    if (Model.CanCurrentUserModerate)
+    {
+        @Html.Partial("StoryEditorBox")
+    }
+}
+else
+{
+    <span class="pageMessage">
+        @Model.NoStoryExistMessage
+    </span>
+}
