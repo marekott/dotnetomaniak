@@ -769,18 +769,10 @@
                                                                   .ToList()
                                                                   .AsReadOnly();
 
-            //DateTime minTimestamp = maxTimestamp.AddDays(-1);
-
-            //ICollection<UserWithScore> topMovers = UserRepository.FindTop(minTimestamp, maxTimestamp, 0, Settings.TopUsers)
-            //                                                     .Result.Select(u => new UserWithScore { User = u, Score = u.GetScoreBetween(minTimestamp, maxTimestamp) })
-            //                                                     .ToList()
-            //                                                     .AsReadOnly();
-
             var viewData = new TopUserTabsViewData
-                               {
-                                   TopLeaders = topLeaders,
-                                   //TopMovers = topMovers
-                               };
+            {
+                TopLeaders = topLeaders
+            };
 
             return View(viewData);
         }

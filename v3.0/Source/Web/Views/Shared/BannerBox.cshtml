@@ -1,6 +1,10 @@
 ﻿@using Kigg.Web
 @model Kigg.Web.ViewData.RecommendationsViewData
 
+@{
+    Layout = null;
+}
+
 @if (Model.Recommendations.Any())
 {
     var ad = Model.Recommendations.FirstOrDefault();

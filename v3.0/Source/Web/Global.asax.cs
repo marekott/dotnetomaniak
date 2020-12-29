@@ -106,6 +106,9 @@ namespace Kigg.Web
             // If we're using EntityFramework 6, here's where it'd go.
             // This is in the MiniProfiler.EF6 NuGet package.
             // MiniProfilerEF6.Initialize();
+
+            ViewEngines.Engines.Clear();
+            ViewEngines.Engines.Add(new RazorViewEngine());
         }
 
         private void InitializeDatabase()

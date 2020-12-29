@@ -788,6 +788,8 @@
     <Content Include="Views\Story\ImageCode.cshtml" />
     <Content Include="Views\Story\Detail.cshtml" />
     <Content Include="Views\Story\Comments.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Kigg.Core.csproj">
@@ -949,7 +951,6 @@
     <Content Include="ErrorPages\Generic.aspx" />
     <Content Include="ErrorPages\AccessDenied.aspx" />
     <Content Include="robots.txt" />
-    <Content Include="Views\Shared\SiteTemplate.Master" />
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>

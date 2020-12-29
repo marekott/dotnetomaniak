@@ -2,6 +2,10 @@
 @model Kigg.Web.TopUserTabsViewData
 
 @{
+    Layout = null;
+}
+
+@{
     bool shouldShowLeaderTab = (Model.TopLeaders.IsNullOrEmpty() == false);
 
     if (shouldShowLeaderTab)

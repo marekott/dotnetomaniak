@@ -2,6 +2,10 @@
 @model Kigg.Web.TagTabsViewData
 
 @{
+    Layout = null;
+}
+
+@{
     bool shouldShowPopularTab = !Model.PopularTags.IsNullOrEmpty();
 
     if (shouldShowPopularTab)

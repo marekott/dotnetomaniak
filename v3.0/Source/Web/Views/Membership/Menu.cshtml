@@ -4,6 +4,7 @@
 @model Kigg.Web.UserMenuViewData
 
 @{
+    Layout = null;
     bool isAuthenticated = Model.IsUserAuthenticated;
     IUser user = Model.CurrentUser;
 }
