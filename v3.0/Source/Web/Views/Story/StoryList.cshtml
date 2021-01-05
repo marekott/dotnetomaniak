@@ -3,7 +3,7 @@
 @using Kigg.Web
 @model Kigg.Web.StoryListViewData
 
-@Html.PageHeader(Model.Subtitle, Model.RssUrl, Model.AtomUrl, Model.FacebookUrl)
+@Html.Raw(Html.PageHeader(Model.Subtitle, Model.RssUrl, Model.AtomUrl, Model.FacebookUrl))
 @if (!Model.Stories.IsNullOrEmpty())
 {
     bool isOdd = true;
@@ -15,7 +15,7 @@
         </div>
         isOdd = !isOdd;
     }
-    @Html.StoryListPager()
+    @Html.Raw(Html.StoryListPager())
     if (Model.CanCurrentUserModerate)
     {
         @Html.Partial("StoryEditorBox")
